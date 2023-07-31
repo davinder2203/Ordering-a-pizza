@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- adding required metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the HTML document for Pizza ordering form">
+    <meta name="Roboto" content="noindex, nofllow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <!-- linking custom css file for the form page -->
+    <link rel="stylesheet" href="./css/form_style.css">
+    <title>Form</title>
+</head>
+<body>
+    <header>
+        <div>
+            <!-- adding the image in the header -->
+        <img id = "formHeaderImage" src="./media/images/formHeaderImage.png" alt="Order Your Pizza">
+        </div>
+      </header>
+    
+      <main>
+        <form id="pizzaOrderForm">
+            <!-- using labels for prompts for input data -->
+            <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <small>Please enter a 10-digit phone number (digits only).</small>
+            
+          <label for="pizzaSize">Choose Pizza Size:</label>
+          <select id="pizzaSize" name="pizzaSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+    
+          <label for="crustType">Select Crust Type:</label>
+          <input type="radio" name="crustType" value="thin">Thin Crust
+          <input type="radio" name="crustType" value="thick">Thick Crust
+    
+          <label for="toppings">Select Toppings:</label>
+          <input type="checkbox" name="toppings" value="pepperoni">Pepperoni
+          <input type="checkbox" name="toppings" value="mushrooms">Mushrooms
+          <input type="checkbox" name="toppings" value="onions">Onions
+          <!-- Add more toppings here -->
+    
+          <label for="specialInstructions">Special Instructions:</label>
+          <textarea id="specialInstructions" name="specialInstructions" rows="4"></textarea>
+    
+          <!-- adding a submit button to finalise placing order -->
+          <button type="submit">Place Order</button>
+        </form>
+      </main>
+    
+      <footer>
+        
+      </footer>
+    
+      <script src="./js/form_script.js"></script>
+</body>
+</html>
